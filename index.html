@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Netsen Pro 35 — Nettoyage professionnel en Ille-et-Vilaine</title>
+<meta name="description" content="Netsen Pro 35, entreprise de nettoyage à domicile et industriel en Ille-et-Vilaine (35). Devis gratuit, prise de rendez-vous en ligne." />
+<style>
+  :root{
+    --blue:#1e3a8a;
+    --blue-2:#1e40af;
+    --green:#16a34a;
+    --green-2:#22c55e;
+    --dark:#0f172a;
+    --gray:#475569;
+    --light:#f8fafc;
+    --border:#e2e8f0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',Tahoma,sans-serif;color:var(--dark);line-height:1.6;background:#fff}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* HEADER */
+  header{position:sticky;top:0;background:#fff;z-index:50;border-bottom:1px solid var(--border)}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;max-width:1200px;margin:0 auto}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}
+  .logo .blue{color:var(--blue)}
+  .logo .green{color:var(--green)}
+  nav ul{display:flex;gap:28px;list-style:none}
+  nav a{color:var(--gray);font-weight:500;transition:color .2s}
+  nav a:hover{color:var(--blue)}
+  .btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:600;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s;font-size:15px}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-primary:hover{background:var(--blue-2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(30,58,138,.25)}
+  .btn-green{background:var(--green);color:#fff}
+  .btn-green:hover{background:var(--green-2);transform:translateY(-1px);box-shadow:0 6px 18px rgba(22,163,74,.25)}
+  .burger{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--blue)}
+
+  /* HERO */
+  .hero{padding:80px 0 100px;background:linear-gradient(135deg,#f0f9ff 0%,#ecfdf5 100%);position:relative;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+  .hero h1{font-size:48px;font-weight:800;line-height:1.15;margin-bottom:20px;color:var(--dark)}
+  .hero h1 span{color:var(--blue)}
+  .hero h1 em{color:var(--green);font-style:normal}
+  .hero p{font-size:18px;color:var(--gray);margin-bottom:32px;max-width:520px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .hero-visual{display:flex;justify-content:center;align-items:center}
+  .hero-visual .logo-big{background:#fff;padding:40px;border-radius:20px;box-shadow:0 20px 60px rgba(30,58,138,.15)}
+
+  /* TRUST */
+  .trust{display:flex;justify-content:center;gap:60px;padding:30px 0;flex-wrap:wrap;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:#fff}
+  .trust-item{text-align:center}
+  .trust-item .num{font-size:32px;font-weight:800;color:var(--blue)}
+  .trust-item .lbl{font-size:14px;color:var(--gray)}
+
+  /* SECTIONS */
+  section{padding:90px 0}
+  .section-title{text-align:center;margin-bottom:60px}
+  .section-title small{color:var(--green);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+  .section-title h2{font-size:38px;margin-top:8px;color:var(--dark)}
+  .section-title p{color:var(--gray);max-width:600px;margin:14px auto 0}
+
+  /* SERVICES */
+  .services{background:var(--light)}
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
+  .service-card{background:#fff;padding:36px;border-radius:14px;border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
+  .service-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.08)}
+  .service-card .icon{width:60px;height:60px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--green));display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;margin-bottom:20px}
+  .service-card h3{font-size:22px;margin-bottom:10px;color:var(--dark)}
+  .service-card p{color:var(--gray);margin-bottom:18px}
+  .service-card ul{list-style:none}
+  .service-card li{padding:6px 0;color:var(--gray);font-size:15px}
+  .service-card li::before{content:"✓ ";color:var(--green);font-weight:700;margin-right:6px}
+
+  /* WHY US */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .why-card{text-align:center;padding:24px}
+  .why-card .ic{font-size:42px;margin-bottom:14px}
+  .why-card h4{font-size:17px;margin-bottom:8px;color:var(--dark)}
+  .why-card p{color:var(--gray);font-size:14px}
+
+  /* ZONE */
+  .zone{background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;text-align:center;padding:70px 0}
+  .zone h2{font-size:34px;margin-bottom:16px}
+  .zone p{font-size:17px;opacity:.9;max-width:700px;margin:0 auto 30px}
+  .zone-list{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+  .zone-list span{background:rgba(255,255,255,.15);padding:8px 18px;border-radius:20px;font-size:14px;backdrop-filter:blur(6px)}
+
+  /* BOOKING */
+  .booking{background:var(--light)}
+  .booking-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;background:#fff;border-radius:16px;padding:40px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+  .calendar{}
+  .cal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+  .cal-header button{background:var(--light);border:1px solid var(--border);width:36px;height:36px;border-radius:8px;cursor:pointer;font-size:18px;color:var(--blue)}
+  .cal-header button:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .cal-header h3{font-size:18px;text-transform:capitalize}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .cal-day-label{text-align:center;font-size:12px;font-weight:700;color:var(--gray);padding:6px 0;text-transform:uppercase}
+  .cal-day{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:8px;cursor:pointer;font-size:14px;border:1px solid transparent;transition:all .15s}
+  .cal-day:hover:not(.disabled):not(.empty){background:#dbeafe;border-color:var(--blue)}
+  .cal-day.disabled{color:#cbd5e1;cursor:not-allowed}
+  .cal-day.empty{cursor:default}
+  .cal-day.selected{background:var(--blue);color:#fff;font-weight:700}
+  .cal-day.today{font-weight:700;color:var(--green)}
+  .booking-form h3{font-size:20px;margin-bottom:8px}
+  .booking-form .selected-date{color:var(--blue);font-weight:600;margin-bottom:16px;font-size:14px;padding:10px;background:#eff6ff;border-radius:8px}
+  .slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+  .slot{padding:10px;border:1px solid var(--border);border-radius:8px;background:#fff;cursor:pointer;font-size:14px;text-align:center;transition:all .15s}
+  .slot:hover{border-color:var(--blue);background:#eff6ff}
+  .slot.selected{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
+  .form-row{margin-bottom:14px}
+  .form-row label{display:block;font-size:13px;font-weight:600;color:var(--gray);margin-bottom:6px}
+  .form-row input,.form-row select,.form-row textarea{width:100%;padding:11px;border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit}
+  .form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:none;border-color:var(--blue)}
+  .form-row textarea{resize:vertical;min-height:70px}
+  .submit-btn{width:100%;padding:14px;background:var(--green);color:#fff;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;transition:background .15s}
+  .submit-btn:hover{background:var(--green-2)}
+  .submit-btn:disabled{background:#cbd5e1;cursor:not-allowed}
+  .confirmation{display:none;background:#dcfce7;color:#166534;padding:16px;border-radius:8px;margin-top:14px;font-size:14px;text-align:center}
+  .confirmation.show{display:block}
+
+  /* DEVIS */
+  .devis{background:#fff}
+  .devis-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:var(--light);border-radius:16px;padding:40px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+  .devis-form .form-row{margin-bottom:16px}
+  .devis-form input[type="number"]{font-size:16px}
+  .freq-options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .freq-opt{padding:12px;border:1px solid var(--border);border-radius:8px;background:#fff;cursor:pointer;text-align:center;font-size:14px;transition:all .15s}
+  .freq-opt:hover{border-color:var(--blue)}
+  .freq-opt.active{background:var(--blue);color:#fff;border-color:var(--blue);font-weight:600}
+  .options-list{display:flex;flex-direction:column;gap:8px}
+  .options-list label{display:flex;align-items:center;gap:10px;padding:10px;background:#fff;border:1px solid var(--border);border-radius:8px;cursor:pointer;font-size:14px;transition:all .15s}
+  .options-list label:hover{border-color:var(--blue)}
+  .options-list input[type="checkbox"]{width:18px;height:18px;accent-color:var(--blue)}
+  .devis-result{background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;border-radius:14px;padding:30px;display:flex;flex-direction:column;justify-content:center}
+  .devis-result h3{font-size:18px;opacity:.9;margin-bottom:8px;font-weight:500}
+  .devis-result .price{font-size:42px;font-weight:800;margin:14px 0;line-height:1.1}
+  .devis-result .price small{font-size:18px;opacity:.85;font-weight:500}
+  .devis-result .breakdown{background:rgba(255,255,255,.12);border-radius:10px;padding:16px;margin-top:14px;font-size:14px}
+  .devis-result .breakdown div{display:flex;justify-content:space-between;padding:4px 0}
+  .devis-result .breakdown .total{border-top:1px solid rgba(255,255,255,.3);padding-top:8px;margin-top:8px;font-weight:700}
+  .devis-result .note{font-size:12px;opacity:.8;margin-top:14px;font-style:italic}
+  .devis-result .cta-devis{display:inline-block;margin-top:18px;padding:12px 20px;background:var(--green);color:#fff;border-radius:8px;font-weight:600;text-align:center;text-decoration:none;transition:background .15s}
+  .devis-result .cta-devis:hover{background:var(--green-2)}
+  .devis-empty{text-align:center;color:rgba(255,255,255,.85);padding:30px 0}
+  .devis-empty .ic{font-size:50px;margin-bottom:14px}
+
+  @media (max-width:900px){
+    .devis-grid{grid-template-columns:1fr;padding:24px}
+    .devis-result .price{font-size:32px}
+  }
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+  .contact-card{padding:30px;border:1px solid var(--border);border-radius:14px;transition:all .2s}
+  .contact-card:hover{border-color:var(--blue);box-shadow:0 8px 20px rgba(0,0,0,.05)}
+  .contact-card .ic{font-size:36px;margin-bottom:14px}
+  .contact-card h4{font-size:17px;margin-bottom:6px}
+  .contact-card a{color:var(--blue);font-weight:600}
+
+  /* FOOTER */
+  footer{background:var(--dark);color:#cbd5e1;padding:50px 0 20px}
+  .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:30px}
+  footer h5{color:#fff;font-size:16px;margin-bottom:14px}
+  footer ul{list-style:none}
+  footer li{padding:4px 0;font-size:14px}
+  footer a:hover{color:var(--green-2)}
+  .footer-bottom{border-top:1px solid #1e293b;padding-top:20px;text-align:center;font-size:13px}
+
+  /* RESPONSIVE */
+  @media (max-width:900px){
+    .hero-grid,.booking-grid,.services-grid,.why-grid,.contact-grid,.footer-grid{grid-template-columns:1fr}
+    .hero h1{font-size:34px}
+    .section-title h2{font-size:28px}
+    nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:20px;gap:14px;border-bottom:1px solid var(--border)}
+    nav ul.open{display:flex}
+    .burger{display:block}
+    section{padding:60px 0}
+    .trust{gap:30px}
+    .booking-grid{padding:24px}
+    .slots{grid-template-columns:repeat(2,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 50 Q 50 20, 90 50" stroke="#16a34a" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <path d="M15 60 Q 50 90, 85 60" stroke="#1e3a8a" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <polygon points="35,55 50,40 65,55 65,75 35,75" fill="#1e3a8a"/>
+        <rect x="45" y="60" width="10" height="12" fill="#fff"/>
+        <text x="42" y="35" font-size="10" fill="#1e3a8a">✦</text>
+      </svg>
+      <span><span class="blue">NETSEN</span> <span class="green">PRO 35</span></span>
+    </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#devis">Devis</a></li>
+        <li><a href="#zone">Zone</a></li>
+        <li><a href="#rdv">Rendez-vous</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="burger" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Le nettoyage <span>professionnel</span> à votre service en <em>Ille-et-Vilaine</em></h1>
+      <p>Netsen Pro 35 intervient à domicile et en milieu industriel partout dans le 35. Une équipe rigoureuse, des produits adaptés, un résultat impeccable.</p>
+      <div class="hero-cta">
+        <a href="#rdv" class="btn btn-green">Prendre rendez-vous</a>
+        <a href="#services" class="btn btn-primary">Voir nos services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="logo-big">
+        <svg width="360" height="220" viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+          <!-- Picto centré à gauche -->
+          <g transform="translate(30,60)">
+            <ellipse cx="100" cy="90" rx="95" ry="55" stroke="#16a34a" stroke-width="11" fill="none" transform="rotate(-15 100 90)"/>
+            <ellipse cx="100" cy="110" rx="100" ry="50" stroke="#1e3a8a" stroke-width="11" fill="none" transform="rotate(15 100 110)"/>
+            <polygon points="55,110 100,65 145,110 145,150 55,150" fill="#1e3a8a"/>
+            <polygon points="55,110 100,65 145,110" fill="#1e40af"/>
+            <rect x="88" y="118" width="24" height="28" fill="#fff" stroke="#1e3a8a" stroke-width="2"/>
+            <line x1="100" y1="118" x2="100" y2="146" stroke="#1e3a8a" stroke-width="2"/>
+            <line x1="88" y1="132" x2="112" y2="132" stroke="#1e3a8a" stroke-width="2"/>
+            <text x="65" y="50" font-size="22" fill="#1e3a8a">✦</text>
+            <text x="90" y="35" font-size="16" fill="#1e3a8a">✦</text>
+            <text x="115" y="55" font-size="18" fill="#1e3a8a">✦</text>
+          </g>
+          <!-- Texte bien à droite du picto -->
+          <text x="270" y="140" font-size="62" font-weight="800" fill="#1e3a8a" font-family="Arial,sans-serif">NETSEN</text>
+          <text x="270" y="200" font-size="42" font-weight="800" fill="#16a34a" font-family="Arial,sans-serif">PRO 35</text>
+          <text x="270" y="235" font-size="16" letter-spacing="2" fill="#64748b" font-family="Arial,sans-serif">NETTOYAGE PROFESSIONNEL</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust container">
+  <div class="trust-item"><div class="num">100%</div><div class="lbl">Satisfaction client</div></div>
+  <div class="trust-item"><div class="num">7j/7</div><div class="lbl">Disponibilité</div></div>
+  <div class="trust-item"><div class="num">24h</div><div class="lbl">Devis gratuit</div></div>
+  <div class="trust-item"><div class="num">35</div><div class="lbl">Ille-et-Vilaine</div></div>
+</div>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-title">
+      <small>Nos prestations</small>
+      <h2>Des services adaptés à chaque besoin</h2>
+      <p>Particuliers ou professionnels, nous intervenons avec le même niveau d'exigence.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">🏠</div>
+        <h3>Nettoyage à domicile</h3>
+        <p>Un intérieur impeccable, sans effort. Prestations ponctuelles ou régulières.</p>
+        <ul>
+          <li>Ménage régulier (hebdo, mensuel)</li>
+          <li>Grand nettoyage de printemps</li>
+          <li>Nettoyage après travaux</li>
+          <li>Vitres, sanitaires, cuisine</li>
+          <li>Repassage et entretien du linge</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="icon">🏭</div>
+        <h3>Nettoyage industriel</h3>
+        <p>Locaux professionnels, ateliers, bureaux : un environnement sain pour vos équipes.</p>
+        <ul>
+          <li>Bureaux et open-spaces</li>
+          <li>Ateliers et entrepôts</li>
+          <li>Commerces et restaurants</li>
+          <li>Remise en état après chantier</li>
+          <li>Contrats d'entretien sur mesure</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pourquoi">
+  <div class="container">
+    <div class="section-title">
+      <small>Pourquoi Netsen Pro 35</small>
+      <h2>L'exigence professionnelle, la proximité humaine</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><div class="ic">⚡</div><h4>Réactivité</h4><p>Devis sous 24h et intervention rapide selon vos disponibilités.</p></div>
+      <div class="why-card"><div class="ic">🌿</div><h4>Produits adaptés</h4><p>Nous utilisons des produits efficaces et respectueux de l'environnement.</p></div>
+      <div class="why-card"><div class="ic">🛡️</div><h4>Assurance pro</h4><p>Entreprise déclarée et assurée pour votre tranquillité.</p></div>
+      <div class="why-card"><div class="ic">⭐</div><h4>Sur mesure</h4><p>Chaque prestation est adaptée à vos besoins et votre budget.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="zone" class="zone">
+  <div class="container">
+    <h2>Nous intervenons partout en Ille-et-Vilaine</h2>
+    <p>De Rennes à Saint-Malo, en passant par Vitré, Fougères, Redon ou Dinard, notre équipe se déplace sur tout le département.</p>
+    <div class="zone-list">
+      <span>Rennes</span><span>Saint-Malo</span><span>Vitré</span><span>Fougères</span>
+      <span>Redon</span><span>Bruz</span><span>Cesson-Sévigné</span><span>Pacé</span>
+      <span>Saint-Grégoire</span><span>Dinard</span><span>Combourg</span><span>Bain-de-Bretagne</span>
+    </div>
+  </div>
+</section>
+
+<section id="devis" class="devis">
+  <div class="container">
+    <div class="section-title">
+      <small>Estimation en ligne</small>
+      <h2>Calculez votre devis en 30 secondes</h2>
+      <p>Une estimation immédiate basée sur les tarifs du marché en Ille-et-Vilaine. Devis définitif gratuit après visite.</p>
+    </div>
+    <div class="devis-grid">
+      <div class="devis-form">
+        <div class="form-row">
+          <label>Type de prestation</label>
+          <select id="d-type">
+            <option value="">Sélectionnez...</option>
+            <option value="domicile_ponctuel">Nettoyage à domicile — ponctuel</option>
+            <option value="domicile_regulier">Nettoyage à domicile — régulier</option>
+            <option value="grand_menage">Grand ménage / printemps</option>
+            <option value="apres_travaux">Nettoyage après travaux</option>
+            <option value="industriel">Bureaux / industriel</option>
+            <option value="vitres">Vitres uniquement</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Surface à nettoyer (m²)</label>
+          <input type="number" id="d-surface" min="10" max="2000" placeholder="Ex: 80" />
+        </div>
+        <div class="form-row" id="d-freq-row" style="display:none">
+          <label>Fréquence</label>
+          <div class="freq-options">
+            <div class="freq-opt" data-freq="hebdo">Hebdomadaire</div>
+            <div class="freq-opt" data-freq="bimensuel">2× / mois</div>
+            <div class="freq-opt" data-freq="mensuel">Mensuel</div>
+            <div class="freq-opt" data-freq="trimestriel">Trimestriel</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <label>Options supplémentaires</label>
+          <div class="options-list">
+            <label><input type="checkbox" class="d-opt" data-opt="vitres" data-price="1.5"> Vitres (+1,5 €/m²)</label>
+            <label><input type="checkbox" class="d-opt" data-opt="repassage" data-price="35"> Repassage (forfait +35 €)</label>
+            <label><input type="checkbox" class="d-opt" data-opt="four" data-price="25"> Four / hotte (+25 €)</label>
+            <label><input type="checkbox" class="d-opt" data-opt="frigo" data-price="20"> Réfrigérateur (+20 €)</label>
+            <label><input type="checkbox" class="d-opt" data-opt="produits" data-price="0.5"> Produits écologiques (+0,5 €/m²)</label>
+          </div>
+        </div>
+      </div>
+      <div class="devis-result" id="devis-result">
+        <div class="devis-empty">
+          <div class="ic">💰</div>
+          <h3 style="font-weight:600">Votre estimation s'affichera ici</h3>
+          <p style="font-size:14px;margin-top:8px;opacity:.8">Renseignez le type de prestation et la surface.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rdv" class="booking">
+  <div class="container">
+    <div class="section-title">
+      <small>Prise de rendez-vous</small>
+      <h2>Réservez votre intervention en ligne</h2>
+      <p>Choisissez la date, l'horaire et remplissez vos coordonnées. Nous vous confirmons sous 24h.</p>
+    </div>
+    <div class="booking-grid">
+      <div class="calendar">
+        <div class="cal-header">
+          <button onclick="changeMonth(-1)">‹</button>
+          <h3 id="cal-month-label"></h3>
+          <button onclick="changeMonth(1)">›</button>
+        </div>
+        <div class="cal-grid" id="cal-labels">
+          <div class="cal-day-label">Lun</div><div class="cal-day-label">Mar</div>
+          <div class="cal-day-label">Mer</div><div class="cal-day-label">Jeu</div>
+          <div class="cal-day-label">Ven</div><div class="cal-day-label">Sam</div>
+          <div class="cal-day-label">Dim</div>
+        </div>
+        <div class="cal-grid" id="cal-days"></div>
+      </div>
+      <form class="booking-form" id="booking-form" action="https://formsubmit.co/netsenpro35@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nouvelle demande de RDV - Netsen Pro 35">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://netsenpro35.fr/?confirmed=1">
+        <input type="hidden" name="date_rdv" id="hidden-date">
+        <input type="hidden" name="creneau" id="hidden-slot">
+        <h3>Vos informations</h3>
+        <div class="selected-date" id="selected-date">Sélectionnez une date dans le calendrier</div>
+        <div id="slots-section" style="display:none">
+          <label style="display:block;font-size:13px;font-weight:600;color:var(--gray);margin-bottom:6px">Créneau horaire</label>
+          <div class="slots" id="slots"></div>
+        </div>
+        <div class="form-row">
+          <label>Type de prestation</label>
+          <select required name="type">
+            <option value="">Sélectionnez...</option>
+            <option>Nettoyage à domicile — ponctuel</option>
+            <option>Nettoyage à domicile — régulier</option>
+            <option>Nettoyage industriel / bureaux</option>
+            <option>Nettoyage après travaux</option>
+            <option>Vitres uniquement</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Nom complet</label>
+          <input type="text" required name="nom" placeholder="Jean Dupont" />
+        </div>
+        <div class="form-row">
+          <label>Téléphone</label>
+          <input type="tel" required name="tel" placeholder="06 12 34 56 78" />
+        </div>
+        <div class="form-row">
+          <label>Email</label>
+          <input type="email" required name="email" placeholder="email@exemple.fr" />
+        </div>
+        <div class="form-row">
+          <label>Adresse / commune</label>
+          <input type="text" required name="adresse" placeholder="Rennes, Saint-Malo..." />
+        </div>
+        <div class="form-row">
+          <label>Précisions (surface, fréquence...)</label>
+          <textarea name="message" placeholder="Ex: appartement 70m², nettoyage hebdomadaire..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submit-btn" disabled>Confirmer le rendez-vous</button>
+        <div class="confirmation" id="confirmation">
+          ✓ Demande envoyée ! Nous vous recontactons sous 24h pour confirmer votre rendez-vous.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <small>Nous contacter</small>
+      <h2>Une question ? Un devis ?</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="ic">📞</div>
+        <h4>Téléphone</h4>
+        <a href="tel:+33616879537">06 16 87 95 37</a>
+      </div>
+      <div class="contact-card">
+        <div class="ic">✉️</div>
+        <h4>Email</h4>
+        <a href="mailto:netsenpro35@gmail.com">netsenpro35@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="ic">📍</div>
+        <h4>Zone</h4>
+        <span>Ille-et-Vilaine (35)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h5>Netsen Pro 35</h5>
+        <p style="font-size:14px;line-height:1.7">Entreprise de nettoyage professionnel à domicile et industriel, basée en Ille-et-Vilaine. Devis gratuit, intervention rapide.</p>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Nettoyage domicile</a></li>
+          <li><a href="#services">Nettoyage industriel</a></li>
+          <li><a href="#services">Vitres</a></li>
+          <li><a href="#services">Après travaux</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Liens</h5>
+        <ul>
+          <li><a href="#rdv">Prendre RDV</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#zone">Zone d'intervention</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Netsen Pro 35 — SIREN 845 291 939 — Tous droits réservés</div>
+  </div>
+</footer>
+
+<script>
+  // ----- CALENDRIER -----
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  let viewDate = new Date(today.getFullYear(), today.getMonth(), 1);
+  let selectedDate = null;
+  let selectedSlot = null;
+
+  const months = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+  const slotsAvailable = ['08:00','10:00','12:00','14:00','16:00','18:00'];
+
+  function renderCalendar(){
+    const label = document.getElementById('cal-month-label');
+    label.textContent = months[viewDate.getMonth()] + ' ' + viewDate.getFullYear();
+
+    const daysContainer = document.getElementById('cal-days');
+    daysContainer.innerHTML = '';
+
+    const firstDay = new Date(viewDate.getFullYear(), viewDate.getMonth(), 1);
+    let startWeekday = firstDay.getDay(); // 0=dim
+    startWeekday = startWeekday === 0 ? 6 : startWeekday - 1; // shift: lun=0
+    const daysInMonth = new Date(viewDate.getFullYear(), viewDate.getMonth()+1, 0).getDate();
+
+    for(let i=0;i<startWeekday;i++){
+      const d = document.createElement('div');
+      d.className = 'cal-day empty';
+      daysContainer.appendChild(d);
+    }
+    for(let i=1;i<=daysInMonth;i++){
+      const d = document.createElement('div');
+      d.className = 'cal-day';
+      d.textContent = i;
+      const dayDate = new Date(viewDate.getFullYear(), viewDate.getMonth(), i);
+      const isPast = dayDate < today;
+      const isSunday = dayDate.getDay() === 0;
+      if(isPast || isSunday){
+        d.classList.add('disabled');
+      } else {
+        d.onclick = () => selectDate(dayDate, d);
+      }
+      if(dayDate.getTime() === today.getTime()) d.classList.add('today');
+      if(selectedDate && dayDate.getTime() === selectedDate.getTime()) d.classList.add('selected');
+      daysContainer.appendChild(d);
+    }
+  }
+
+  function changeMonth(delta){
+    viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth()+delta, 1);
+    renderCalendar();
+  }
+
+  function selectDate(date, el){
+    selectedDate = date;
+    selectedSlot = null;
+    document.querySelectorAll('.cal-day').forEach(d => d.classList.remove('selected'));
+    el.classList.add('selected');
+    const fmt = date.toLocaleDateString('fr-FR', {weekday:'long',day:'numeric',month:'long',year:'numeric'});
+    document.getElementById('selected-date').innerHTML = '📅 <strong>' + fmt + '</strong>';
+    document.getElementById('hidden-date').value = fmt;
+    document.getElementById('slots-section').style.display = 'block';
+    renderSlots();
+    updateSubmit();
+  }
+
+  function renderSlots(){
+    const container = document.getElementById('slots');
+    container.innerHTML = '';
+    slotsAvailable.forEach(s => {
+      const el = document.createElement('div');
+      el.className = 'slot';
+      el.textContent = s;
+      el.onclick = () => {
+        selectedSlot = s;
+        document.getElementById('hidden-slot').value = s;
+        document.querySelectorAll('.slot').forEach(x => x.classList.remove('selected'));
+        el.classList.add('selected');
+        updateSubmit();
+      };
+      container.appendChild(el);
+    });
+  }
+
+  function updateSubmit(){
+    document.getElementById('submit-btn').disabled = !(selectedDate && selectedSlot);
+  }
+
+  renderCalendar();
+
+  // ----- DEVIS / ESTIMATION -----
+  // Tarifs marché Ille-et-Vilaine 2026 (€/m²) — fourchette basse / haute
+  const tarifs = {
+    domicile_ponctuel: {min:3.0, max:4.5, label:'Nettoyage domicile ponctuel'},
+    domicile_regulier: {min:2.0, max:3.0, label:'Nettoyage domicile régulier'},
+    grand_menage:      {min:4.0, max:6.0, label:'Grand ménage / printemps'},
+    apres_travaux:     {min:5.0, max:9.0, label:'Nettoyage après travaux'},
+    industriel:        {min:1.5, max:2.5, label:'Bureaux / industriel'},
+    vitres:            {min:3.0, max:5.0, label:'Vitres uniquement'}
+  };
+  // Réductions selon fréquence (sur prestation régulière)
+  const freqDiscount = {hebdo:0.20, bimensuel:0.15, mensuel:0.10, trimestriel:0.05};
+  const freqLabel = {hebdo:'Hebdomadaire (-20%)', bimensuel:'2× / mois (-15%)', mensuel:'Mensuel (-10%)', trimestriel:'Trimestriel (-5%)'};
+  let selectedFreq = null;
+
+  const dType = document.getElementById('d-type');
+  const dSurface = document.getElementById('d-surface');
+  const dFreqRow = document.getElementById('d-freq-row');
+  const dResult = document.getElementById('devis-result');
+
+  dType.addEventListener('change', ()=>{
+    if(dType.value === 'domicile_regulier' || dType.value === 'industriel'){
+      dFreqRow.style.display = 'block';
+    } else {
+      dFreqRow.style.display = 'none';
+      selectedFreq = null;
+      document.querySelectorAll('.freq-opt').forEach(x=>x.classList.remove('active'));
+    }
+    calcDevis();
+  });
+  dSurface.addEventListener('input', calcDevis);
+  document.querySelectorAll('.freq-opt').forEach(el => {
+    el.addEventListener('click', ()=>{
+      document.querySelectorAll('.freq-opt').forEach(x=>x.classList.remove('active'));
+      el.classList.add('active');
+      selectedFreq = el.dataset.freq;
+      calcDevis();
+    });
+  });
+  document.querySelectorAll('.d-opt').forEach(el => el.addEventListener('change', calcDevis));
+
+  function calcDevis(){
+    const type = dType.value;
+    const surface = parseFloat(dSurface.value);
+    if(!type || !surface || surface < 10){
+      dResult.innerHTML = `<div class="devis-empty"><div class="ic">💰</div><h3 style="font-weight:600">Votre estimation s'affichera ici</h3><p style="font-size:14px;margin-top:8px;opacity:.8">Renseignez le type de prestation et la surface (min. 10 m²).</p></div>`;
+      return;
+    }
+    const t = tarifs[type];
+    let baseMin = t.min * surface;
+    let baseMax = t.max * surface;
+
+    // Options
+    let optMin = 0, optMax = 0;
+    const opts = [];
+    document.querySelectorAll('.d-opt:checked').forEach(o => {
+      const price = parseFloat(o.dataset.price);
+      const name = o.dataset.opt;
+      if(name === 'vitres' || name === 'produits'){
+        optMin += price * surface;
+        optMax += price * surface;
+        opts.push({label: o.parentElement.textContent.trim(), val: (price*surface).toFixed(0)+' €'});
+      } else {
+        optMin += price;
+        optMax += price;
+        opts.push({label: o.parentElement.textContent.trim(), val: price+' €'});
+      }
+    });
+
+    // Fréquence (réduction sur la base par passage)
+    let discountPct = 0;
+    if(selectedFreq && (type === 'domicile_regulier' || type === 'industriel')){
+      discountPct = freqDiscount[selectedFreq];
+      baseMin = baseMin * (1 - discountPct);
+      baseMax = baseMax * (1 - discountPct);
+    }
+
+    const totalMin = Math.round(baseMin + optMin);
+    const totalMax = Math.round(baseMax + optMax);
+    const isRegulier = (type === 'domicile_regulier' || type === 'industriel') && selectedFreq;
+    const unite = isRegulier ? ' / passage' : '';
+
+    let html = `
+      <h3>${t.label}</h3>
+      <div class="price">${totalMin} – ${totalMax} €<small>${unite}</small></div>
+      <div class="breakdown">
+        <div><span>Surface</span><span>${surface} m²</span></div>
+        <div><span>Tarif appliqué</span><span>${t.min} – ${t.max} €/m²</span></div>
+        <div><span>Sous-total prestation</span><span>${Math.round(baseMin + (selectedFreq?0:0))} – ${Math.round(baseMax + (selectedFreq?0:0))} €</span></div>
+        ${selectedFreq ? `<div><span>Fréquence</span><span>${freqLabel[selectedFreq]}</span></div>` : ''}
+        ${opts.map(o=>`<div><span style="font-size:12px">+ ${o.label.replace(/\(.*\)/,'').trim()}</span><span>+${o.val}</span></div>`).join('')}
+        <div class="total"><span>Estimation totale</span><span>${totalMin} – ${totalMax} €</span></div>
+      </div>
+      <div class="note">⚠️ Estimation indicative basée sur les tarifs moyens du marché en Ille-et-Vilaine. Le prix définitif sera confirmé après visite gratuite.</div>
+      <a href="#rdv" class="cta-devis">Réserver une visite gratuite →</a>
+    `;
+    dResult.innerHTML = html;
+  }
+</script>
+</body>
+</html>
